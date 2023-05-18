@@ -2,9 +2,20 @@ import Head from "next/head";
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { AiFillLinkedin,AiFillGithub } from 'react-icons/ai'
 import Image from "next/image";
-import deved from './20230427_144601.jpg'
-import legoProject from './brickBybrickSC.png'
-import starWarsEnc from './starwarsEnc.png'
+import deved from '../images/20230427_144601.jpg'
+import legoProject from '../images/brickBybrickSC.png'
+import starWarsEnc from '../images/starwarsEnc.png'
+import bootstrap from '../images/bootstrap.png'
+import css from '../images/css.png'
+import express from '../images/express.png'
+import html from '../images/html.png'
+import js from '../images/js.png'
+import mongodb from '../images/mongodb.png'
+import node from '../images/nodejs.png'
+import postgresql from '../images/postgresql.png'
+import react from '../images/react.png'
+import redux from '../images/redux-logo.png'
+import socket from '../images/socket_io.png'
 
 export default function Home() {
   return (
@@ -40,21 +51,43 @@ export default function Home() {
           </div>
       </section>
 
+      <section>
+        <div>
+          <h1 className=" text-3xl justify-center">Skills</h1>
+        </div>
+        <div className="flex justify-center gap-5">
+        <Image src={bootstrap} style={{ width: "5%", height: 'auto' }} />
+    <Image src={css} style={{ width: "5%", height: 'auto' }} />
+    <Image src={express} style={{ width: "5%", height: 'auto' }} />
+    <Image src={html} style={{ width: "5%", height: 'auto' }} />
+    <Image src={js} style={{ width: "5%", height: 'auto' }} />
+    <Image src={mongodb} style={{ width: "5%", height: 'auto' }} />
+    <Image src={node} style={{ width: "5%", height: 'auto' }} />
+    <Image src={postgresql} style={{ width: "5%", height: 'auto' }} />
+    <Image src={react} style={{ width: "5%", height: 'auto' }} />
+    <Image src={redux} style={{ width: "5%", height: 'auto' }} />
+    <Image src={socket} style={{ width: "5%", height: 'auto' }} />
+        </div>
+      </section>
+
 
       <section>
         <div>
           <h3 className="text-3xl py-1">Projects</h3>
           <p className="text-md py-2 leading-8 text-gray-800">Some more text that i might add about my projects</p>
         </div>
-        <div>
-          <div>
-            <Image src={legoProject} width={300} height={300}/>
+        <div className="flex justify-between gap-5">
+          <div className="text-center shadow-lg p-10 rounded-xl">
+            <Image src={legoProject} width={300} height={300} className="pb-5"/>
             <h3>brickBybrick: Lego collection app</h3>
-            <Image src={starWarsEnc}/>
+            </div>
+            <div className="text-center shadow-lg p-10 rounded-xl">
+            <Image src={starWarsEnc} width={300} height={300} className="pb-5"/>
+            <h3>A Star Wars encyclopedia</h3>
           </div>
         </div>
       </section>
-    </main>
+    </main> 
     </div>
   
   )
