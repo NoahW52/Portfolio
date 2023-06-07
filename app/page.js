@@ -37,46 +37,40 @@ export default function Home() {
 
 
       <main className="bg-white px-10 md:px-20 lg:px-40">
-        <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl">Developedbyed</h1>
+        <section className="">
+          <nav className="py-2 mb-12 flex justify-between">
+            <div className="text-5xl flex justify-center ml-4 gap-5 py-3 text-gray-600">
+              <AiFillLinkedin />
+              <AiFillGithub />
+            </div>
             <ul className="flex items-center">
-              <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl" /></li>
               <li>
-                <a className="bg-cyan-500 text-white px-4 py-2 rounded-md ml-8" href="#">Resume</a>
+                <a className="bg-cyan-500 text-white px-4 py-2 rounded-md ml-8" href="/resume.pdf" target="_blank">Resume</a>
               </li>
             </ul>
           </nav>
-          <div className="text-center p-5">
+          <div className="text-center">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Noah Wright</h2>
             <h3 className="text-2xl py-2 md:text-3xl">Full-stack developer</h3>
           </div>
-          {/* <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <AiFillLinkedin />
-            <AiFillGithub />
-          </div> */}
-          <div className="flex gap-5">
-            <div className="relative mx-auto rounded-full w-1/3">
-              <Image className="relative rounded-full " src={deved} />
+          <div className="flex flex-col pt-10 xl:flex-row gap-10 justify-between text-center">
+            <div className="relative mx-auto rounded-full">
+              <Image className=" rounded-full" src={deved} alt="headshot" width={1000} />
+              <div className="flex flex-col justify-center items-center">
+                <h3 className="text-2xl py-2 md:text-xl">The Woodlands, Texas</h3>
+                <h3 className="text-2xl py-2 md:text-xl">noahthomaswright01@gmail.com</h3>
+                <h3 className="text-2xl py-2 md:text-xl">(936) 520-9576</h3>
+              </div>
             </div>
-            <p className="text-lg leading-8 text-gray-800 w-1/2">As a recent graduate of DigitalCrafts bootcamp, I have a strong skillset in full-stack web development, specializing in JavaScript, React, Next.js, and Mongoose. I thrive in team environments, delivering projects and fostering positive relationships with fellow developers. My passion for technology and constant curiosity drive my journey in web development. I enjoy exploring new technologies and embracing the challenge of learning something new. I am committed to staying ahead in this ever-evolving field by expanding my knowledge and honing my skills.</p>
-          </div>
-          <div>
-
-            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl mx-auto">
-              In addition to coding, I have a love for building Legos. The attention to detail required in Lego building aligns with my approach to coding, seeking efficient solutions and creating user-friendly web experiences that leave a lasting impact
-            </p>
-
-            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl mx-auto">
-              I am excited to apply my expertise in creating innovative web applications. With my dedication to ongoing learning, technological passion, and attention to detail, I am a valuable asset to any team. I am eager to contribute to challenging projects and collaborate with like-minded individuals in pushing the boundaries of web development.
-            </p>
-
+            <div className="flex">
+              <p className=" text-lg leading-8 text-gray-800">As a recent graduate of DigitalCrafts bootcamp, I have a strong skillset in full-stack web development, specializing in JavaScript, React, Next.js, and Mongoose. I thrive in team environments, delivering projects and fostering positive relationships with fellow developers. My passion for technology and constant curiosity drive my journey in web development. I enjoy exploring new technologies and embracing the challenge of learning something new. I am committed to staying ahead in this ever-evolving field by expanding my knowledge and honing my skills. I am excited to apply my expertise in creating innovative web applications. With my dedication to ongoing learning, technological passion, and attention to detail, I am a valuable asset to any team. I am eager to contribute to challenging projects and collaborate with like-minded individuals in pushing the boundaries of web development.</p>
+            </div>
           </div>
         </section>
 
         <section>
           <div>
-            <h1 className=" text-3xl justify-center">Skills</h1>
+            <h1 className=" flex text-teal-600 text-5xl flex-wrap justify-center p-10 font-bold">Skills</h1>
           </div>
           <div className="flex justify-center gap-5 flex-wrap">
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"> <img alt="" className="w-20 h-20 hover:scale-125 transition-transform duration-200" src='/html5-icon.svg' /></a>
@@ -96,12 +90,11 @@ export default function Home() {
         </section>
 
 
-        <section className="flex justify-center gap-5 lg:flex-row lg:flex-wrap">
+        <section className="flex flex-col items-center justify-center gap-5">
           <div>
-            <h3 className="text-3xl py-1">Projects</h3>
-            <p className="text-md py-2 leading-8 text-gray-800">Some more text that i might add about my projects</p>
+            <h3 className=" flex text-teal-600 text-5xl flex-wrap justify-center p-10 font-bold">Projects</h3>
           </div>
-          <div className="flex justify-between gap-10">
+          <div className="flex justify-between gap-10 flex-col items-center lg:flex-row">
             <div className="basis-1/3 flex-1 hover:scale-105 transition-transform duration-200">
               <a href="https://brickbybrick.vercel.app/" target="_blank">
                 <h3>brickBybrick: Lego collection app</h3>
@@ -113,8 +106,6 @@ export default function Home() {
                 <h3>Star Wars encyclopedia</h3>
                 <Image alt="" src={starWarsEnc} width={'100%'} height={'100%'} className="rounded-lg object-cover shadow-2xl" />
               </a>
-              <div className="p-10">
-              </div>
             </div>
             <div className="basis-1/3 flex-1 hover:scale-105 transition-transform duration-200">
               <a href="https://ezgo.vercel.app/" target="_blank">
@@ -123,37 +114,28 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <section className="flex justify-center items-center h-screen">
-            <div className="p-5 bg-gray-100 rounded-lg max-w-md mx-auto">
-              <div className="text-5xl flex justify-center ml-4 gap-5 py-3 text-gray-600">
-                <h1 className="text-3xl py-1">Contact Me!</h1>
-                <AiFillLinkedin />
-                <AiFillGithub />
-              </div>
-              <div className="flex justify-between">
-                <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-2">
-                  <label>Name</label>
-                  <input type="text" name="user_name" />
-                  <label>Email</label>
-                  <input type="email" name="user_email" />
-                  <label>Message</label>
-                  <textarea name="message" />
-                  <input type="submit" value="Send" />
-                </form>
-                <div>
-                  <div className="gap-4">
-                    <h3>Phone:</h3>
-                    <p>123-456-7890</p>
-                  </div>
-                </div>
-              </div>
+        </section>
+
+        <section className="flex justify-center items-center p-16">
+          <div className="p-5 bg-gray-300 rounded-lg max-w-md mx-auto shadow-2xl">
+            <h1 className="flex justify-center text-3xl py-1">Contact Me!</h1>
+            <div className="flex justify-between">
+              <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-2">
+                <label>Name</label>
+                <input type="text" name="user_name" />
+                <label>Email</label>
+                <input type="email" name="user_email" />
+                <label>Message</label>
+                <textarea name="message" />
+                <input type="submit" value="Send" className="cursor-pointer" />
+              </form>
             </div>
-          </section>
-
-          <div>
-
           </div>
         </section>
+
+        <div>
+
+        </div>
 
       </main>
     </div>
