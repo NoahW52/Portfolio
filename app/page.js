@@ -40,8 +40,12 @@ export default function Home() {
         <section className="">
           <nav className="py-2 mb-12 flex justify-between">
             <div className="text-5xl flex justify-center ml-4 gap-5 py-3 text-gray-600">
-              <AiFillLinkedin />
-              <AiFillGithub />
+              <a href="https://www.linkedin.com/in/noah-wright-5a5326219/" target="_blank">
+                <AiFillLinkedin />
+              </a>
+              <a href="https://github.com/NoahW52" target="_blank">
+                <AiFillGithub />
+              </a>
             </div>
             <ul className="flex items-center">
               <li>
