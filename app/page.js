@@ -49,7 +49,7 @@ export default function Home() {
             </div>
             <ul className="flex items-center">
               <li>
-                <a className="bg-cyan-500 text-white px-4 py-2 rounded-md ml-8" href="/resume.pdf" target="_blank">Resume</a>
+                <a className="bg-cyan-500 text-white px-4 py-2 rounded-md ml-8" href="/Software-Resume.pdf" target="_blank">Resume</a>
               </li>
             </ul>
           </nav>
